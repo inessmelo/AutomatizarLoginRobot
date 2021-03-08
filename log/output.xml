@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20210307 22:54:58.465" rpa="false">
+<suite id="s1" name="Test" source="d:\Ines\TestePratico\LoginStefanini\web\test">
+<suite id="s1-s1" name="Login" source="d:\Ines\TestePratico\LoginStefanini\web\test\login.robot">
+<test id="s1-s1-t1" name="Validar campos obrigatório">
+<kw name="Inicia cenario" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210307 22:54:58.725" level="INFO">Opening browser 'chrome' to base url 'http://prova.stefanini-jgr.com.br/teste/qa/'.</msg>
+<status status="PASS" starttime="20210307 22:54:58.725" endtime="20210307 22:55:02.183"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:54:58.725" endtime="20210307 22:55:02.183"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:register</arg>
+</arguments>
+<msg timestamp="20210307 22:55:02.185" level="INFO">Clicking element 'id:register'.</msg>
+<status status="PASS" starttime="20210307 22:55:02.184" endtime="20210307 22:55:02.281"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath:.//*[@id='name']/../p</arg>
+</arguments>
+<assign>
+<var>${nome_erro}</var>
+</assign>
+<msg timestamp="20210307 22:55:02.298" level="INFO">${nome_erro} = &lt;selenium.webdriver.remote.webelement.WebElement (session="4659a9e698634df53207ce4c23bcb164", element="31420835-0c32-423e-9536-a5039f505453")&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:02.282" endtime="20210307 22:55:02.298"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${nome_erro.text}</arg>
+<arg>O campo Nome é obrigatório.</arg>
+</arguments>
+<status status="PASS" starttime="20210307 22:55:02.298" endtime="20210307 22:55:02.314"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath:.//*[@id='email']/../p</arg>
+</arguments>
+<assign>
+<var>${email_erro}</var>
+</assign>
+<msg timestamp="20210307 22:55:02.331" level="INFO">${email_erro} = &lt;selenium.webdriver.remote.webelement.WebElement (session="4659a9e698634df53207ce4c23bcb164", element="160777f5-411b-410f-88eb-be7d1beb5b37")&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:02.315" endtime="20210307 22:55:02.331"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${email_erro.text}</arg>
+<arg>O campo E-mail é obrigatório.</arg>
+</arguments>
+<status status="PASS" starttime="20210307 22:55:02.332" endtime="20210307 22:55:02.351"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath:.//*[@id='password']/../p</arg>
+</arguments>
+<assign>
+<var>${senha_erro}</var>
+</assign>
+<msg timestamp="20210307 22:55:02.369" level="INFO">${senha_erro} = &lt;selenium.webdriver.remote.webelement.WebElement (session="4659a9e698634df53207ce4c23bcb164", element="2dbb4d51-2c0c-4ca0-a359-cbc823b823c8")&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:02.352" endtime="20210307 22:55:02.369"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${senha_erro.text}</arg>
+<arg>O campo Senha é obrigatório.</arg>
+</arguments>
+<status status="PASS" starttime="20210307 22:55:02.370" endtime="20210307 22:55:02.388"></status>
+</kw>
+<kw name="Finaliza cenario" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210307 22:55:02.968" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:02.389" endtime="20210307 22:55:02.968"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210307 22:55:02.969" endtime="20210307 22:55:05.093"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:02.388" endtime="20210307 22:55:05.094"></status>
+</kw>
+<tags>
+<tag>campo_obrig</tag>
+</tags>
+<status status="PASS" starttime="20210307 22:54:58.724" endtime="20210307 22:55:05.095" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Validar campo nome">
+<kw name="Inicia cenario" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210307 22:55:05.101" level="INFO">Opening browser 'chrome' to base url 'http://prova.stefanini-jgr.com.br/teste/qa/'.</msg>
+<status status="PASS" starttime="20210307 22:55:05.100" endtime="20210307 22:55:08.458"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:05.099" endtime="20210307 22:55:08.458"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:name</arg>
+<arg>Joao</arg>
+</arguments>
+<msg timestamp="20210307 22:55:08.459" level="INFO">Typing text 'Joao' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20210307 22:55:08.459" endtime="20210307 22:55:08.617"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>joao@teste.com</arg>
+</arguments>
+<msg timestamp="20210307 22:55:08.619" level="INFO">Typing text 'joao@teste.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210307 22:55:08.618" endtime="20210307 22:55:08.769"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>12345678</arg>
+</arguments>
+<msg timestamp="20210307 22:55:08.770" level="INFO">Typing text '12345678' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210307 22:55:08.769" endtime="20210307 22:55:09.068"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:register</arg>
+</arguments>
+<msg timestamp="20210307 22:55:09.069" level="INFO">Clicking element 'id:register'.</msg>
+<status status="PASS" starttime="20210307 22:55:09.069" endtime="20210307 22:55:09.159"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id='name']/../p</arg>
+</arguments>
+<assign>
+<var>${nome_erro}</var>
+</assign>
+<msg timestamp="20210307 22:55:09.180" level="INFO">${nome_erro} = &lt;selenium.webdriver.remote.webelement.WebElement (session="22568e1400f4281d1244c5917b99854e", element="853b2df3-55bc-4307-9cce-9f96701714e8")&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:09.160" endtime="20210307 22:55:09.180"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${nome_erro.text}</arg>
+<arg>Por favor, insira um nome completo.</arg>
+</arguments>
+<status status="PASS" starttime="20210307 22:55:09.181" endtime="20210307 22:55:09.202"></status>
+</kw>
+<kw name="Finaliza cenario" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210307 22:55:09.805" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:09.205" endtime="20210307 22:55:09.806"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210307 22:55:09.806" endtime="20210307 22:55:11.937"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:09.203" endtime="20210307 22:55:11.938"></status>
+</kw>
+<tags>
+<tag>campo_nome</tag>
+</tags>
+<status status="PASS" starttime="20210307 22:55:05.098" endtime="20210307 22:55:11.939" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Validar campo email">
+<kw name="Inicia cenario" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210307 22:55:11.944" level="INFO">Opening browser 'chrome' to base url 'http://prova.stefanini-jgr.com.br/teste/qa/'.</msg>
+<status status="PASS" starttime="20210307 22:55:11.944" endtime="20210307 22:55:15.262"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:11.943" endtime="20210307 22:55:15.262"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:name</arg>
+<arg>Joao Carlos</arg>
+</arguments>
+<msg timestamp="20210307 22:55:15.264" level="INFO">Typing text 'Joao Carlos' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20210307 22:55:15.263" endtime="20210307 22:55:15.448"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>joaoteste.com</arg>
+</arguments>
+<msg timestamp="20210307 22:55:15.450" level="INFO">Typing text 'joaoteste.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210307 22:55:15.449" endtime="20210307 22:55:15.592"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>12345678</arg>
+</arguments>
+<msg timestamp="20210307 22:55:15.593" level="INFO">Typing text '12345678' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210307 22:55:15.593" endtime="20210307 22:55:15.840"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:register</arg>
+</arguments>
+<msg timestamp="20210307 22:55:15.841" level="INFO">Clicking element 'id:register'.</msg>
+<status status="PASS" starttime="20210307 22:55:15.840" endtime="20210307 22:55:15.916"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id='email']/../p</arg>
+</arguments>
+<assign>
+<var>${email_erro}</var>
+</assign>
+<msg timestamp="20210307 22:55:15.941" level="INFO">${email_erro} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e94b9d04ebcf12cd117fe0b8ba1512b4", element="27174aa1-60d5-4cae-a068-a62f81bc0b13")&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:15.918" endtime="20210307 22:55:15.941"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${email_erro.text}</arg>
+<arg>Por favor, insira um e-mail válido.</arg>
+</arguments>
+<status status="PASS" starttime="20210307 22:55:15.942" endtime="20210307 22:55:15.961"></status>
+</kw>
+<kw name="Finaliza cenario" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210307 22:55:16.518" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:15.962" endtime="20210307 22:55:16.518"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210307 22:55:16.518" endtime="20210307 22:55:18.656"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:15.961" endtime="20210307 22:55:18.657"></status>
+</kw>
+<tags>
+<tag>campo_email</tag>
+</tags>
+<status status="PASS" starttime="20210307 22:55:11.941" endtime="20210307 22:55:18.657" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="Validar campo senha">
+<kw name="Inicia cenario" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210307 22:55:18.663" level="INFO">Opening browser 'chrome' to base url 'http://prova.stefanini-jgr.com.br/teste/qa/'.</msg>
+<status status="PASS" starttime="20210307 22:55:18.663" endtime="20210307 22:55:21.981"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:18.662" endtime="20210307 22:55:21.982"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:name</arg>
+<arg>Joao Carlos</arg>
+</arguments>
+<msg timestamp="20210307 22:55:21.983" level="INFO">Typing text 'Joao Carlos' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20210307 22:55:21.982" endtime="20210307 22:55:22.122"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>joao@teste.com</arg>
+</arguments>
+<msg timestamp="20210307 22:55:22.122" level="INFO">Typing text 'joao@teste.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210307 22:55:22.122" endtime="20210307 22:55:22.223"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>123456</arg>
+</arguments>
+<msg timestamp="20210307 22:55:22.224" level="INFO">Typing text '123456' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210307 22:55:22.224" endtime="20210307 22:55:22.333"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:register</arg>
+</arguments>
+<msg timestamp="20210307 22:55:22.334" level="INFO">Clicking element 'id:register'.</msg>
+<status status="PASS" starttime="20210307 22:55:22.334" endtime="20210307 22:55:22.399"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id='password']/../p</arg>
+</arguments>
+<assign>
+<var>${senha_erro}</var>
+</assign>
+<msg timestamp="20210307 22:55:22.561" level="INFO">${senha_erro} = &lt;selenium.webdriver.remote.webelement.WebElement (session="78c0d5332c10630949303b67b94667f6", element="635693a3-f006-4675-b728-1a0ecd711f1e")&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:22.400" endtime="20210307 22:55:22.561"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${senha_erro.text}</arg>
+<arg>A senha deve conter ao menos 8 caracteres.</arg>
+</arguments>
+<status status="PASS" starttime="20210307 22:55:22.562" endtime="20210307 22:55:22.594"></status>
+</kw>
+<kw name="Finaliza cenario" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210307 22:55:23.186" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:22.596" endtime="20210307 22:55:23.186"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210307 22:55:23.186" endtime="20210307 22:55:25.320"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:22.595" endtime="20210307 22:55:25.321"></status>
+</kw>
+<tags>
+<tag>campo_senha</tag>
+</tags>
+<status status="PASS" starttime="20210307 22:55:18.660" endtime="20210307 22:55:25.322" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="Login com sucesso">
+<kw name="Inicia cenario" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210307 22:55:25.328" level="INFO">Opening browser 'chrome' to base url 'http://prova.stefanini-jgr.com.br/teste/qa/'.</msg>
+<status status="PASS" starttime="20210307 22:55:25.327" endtime="20210307 22:55:28.643"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:25.326" endtime="20210307 22:55:28.643"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:name</arg>
+<arg>Joao Carlos</arg>
+</arguments>
+<msg timestamp="20210307 22:55:28.645" level="INFO">Typing text 'Joao Carlos' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20210307 22:55:28.644" endtime="20210307 22:55:28.830"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>joao@teste.com</arg>
+</arguments>
+<msg timestamp="20210307 22:55:28.831" level="INFO">Typing text 'joao@teste.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210307 22:55:28.831" endtime="20210307 22:55:29.014"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>12345678</arg>
+</arguments>
+<msg timestamp="20210307 22:55:29.016" level="INFO">Typing text '12345678' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210307 22:55:29.016" endtime="20210307 22:55:29.309"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:register</arg>
+</arguments>
+<msg timestamp="20210307 22:55:29.310" level="INFO">Clicking element 'id:register'.</msg>
+<status status="PASS" starttime="20210307 22:55:29.310" endtime="20210307 22:55:29.410"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>css:h2[class='table-title']</arg>
+</arguments>
+<assign>
+<var>${cadastrado}</var>
+</assign>
+<msg timestamp="20210307 22:55:29.435" level="INFO">${cadastrado} = &lt;selenium.webdriver.remote.webelement.WebElement (session="93dc881390dcda232a40bffe1e9ac496", element="7b81d83d-492e-4ac0-beef-50090e40ef01")&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:29.411" endtime="20210307 22:55:29.435"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${cadastrado.text}</arg>
+<arg>Usuários cadastrados</arg>
+</arguments>
+<status status="PASS" starttime="20210307 22:55:29.436" endtime="20210307 22:55:29.465"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath:.//td[contains(., 'joao@teste.com')]</arg>
+</arguments>
+<assign>
+<var>${usu}</var>
+</assign>
+<msg timestamp="20210307 22:55:29.484" level="INFO">${usu} = &lt;selenium.webdriver.remote.webelement.WebElement (session="93dc881390dcda232a40bffe1e9ac496", element="4c43f58d-6496-4ae5-bb74-90807c4e2324")&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:29.466" endtime="20210307 22:55:29.484"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${usu.text}</arg>
+</arguments>
+<msg timestamp="20210307 22:55:29.502" level="INFO">joao@teste.com</msg>
+<status status="PASS" starttime="20210307 22:55:29.485" endtime="20210307 22:55:29.503"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${usu.text}</arg>
+<arg>joao@teste.com</arg>
+</arguments>
+<status status="PASS" starttime="20210307 22:55:29.504" endtime="20210307 22:55:29.518"></status>
+</kw>
+<kw name="Finaliza cenario" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210307 22:55:30.042" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:29.519" endtime="20210307 22:55:30.042"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210307 22:55:30.043" endtime="20210307 22:55:32.167"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:29.519" endtime="20210307 22:55:32.168"></status>
+</kw>
+<tags>
+<tag>login</tag>
+</tags>
+<status status="PASS" starttime="20210307 22:55:25.325" endtime="20210307 22:55:32.169" critical="yes"></status>
+</test>
+<test id="s1-s1-t6" name="Excluindo usuario">
+<kw name="Inicia cenario" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210307 22:55:32.175" level="INFO">Opening browser 'chrome' to base url 'http://prova.stefanini-jgr.com.br/teste/qa/'.</msg>
+<status status="PASS" starttime="20210307 22:55:32.174" endtime="20210307 22:55:35.488"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:32.173" endtime="20210307 22:55:35.489"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:name</arg>
+<arg>Joao Carlos</arg>
+</arguments>
+<msg timestamp="20210307 22:55:35.490" level="INFO">Typing text 'Joao Carlos' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20210307 22:55:35.489" endtime="20210307 22:55:35.627"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>joao@teste.com</arg>
+</arguments>
+<msg timestamp="20210307 22:55:35.628" level="INFO">Typing text 'joao@teste.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210307 22:55:35.628" endtime="20210307 22:55:35.730"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>12345678</arg>
+</arguments>
+<msg timestamp="20210307 22:55:35.732" level="INFO">Typing text '12345678' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210307 22:55:35.731" endtime="20210307 22:55:35.839"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:register</arg>
+</arguments>
+<msg timestamp="20210307 22:55:35.840" level="INFO">Clicking element 'id:register'.</msg>
+<status status="PASS" starttime="20210307 22:55:35.840" endtime="20210307 22:55:35.922"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:name</arg>
+<arg>Maria Clara</arg>
+</arguments>
+<msg timestamp="20210307 22:55:35.923" level="INFO">Typing text 'Maria Clara' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20210307 22:55:35.923" endtime="20210307 22:55:36.153"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>maria@teste.com</arg>
+</arguments>
+<msg timestamp="20210307 22:55:36.154" level="INFO">Typing text 'maria@teste.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210307 22:55:36.154" endtime="20210307 22:55:36.260"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>123123123</arg>
+</arguments>
+<msg timestamp="20210307 22:55:36.261" level="INFO">Typing text '123123123' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210307 22:55:36.260" endtime="20210307 22:55:36.373"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:register</arg>
+</arguments>
+<msg timestamp="20210307 22:55:36.374" level="INFO">Clicking element 'id:register'.</msg>
+<status status="PASS" starttime="20210307 22:55:36.374" endtime="20210307 22:55:36.421"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>css:h2[class='table-title']</arg>
+</arguments>
+<assign>
+<var>${cadastrado}</var>
+</assign>
+<msg timestamp="20210307 22:55:36.440" level="INFO">${cadastrado} = &lt;selenium.webdriver.remote.webelement.WebElement (session="4d6779267bf7bd48d6de2337c32aa27b", element="ba627be2-e306-4134-98dc-1cb38131e25b")&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:36.422" endtime="20210307 22:55:36.440"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${cadastrado.text}</arg>
+<arg>Usuários cadastrados</arg>
+</arguments>
+<status status="PASS" starttime="20210307 22:55:36.441" endtime="20210307 22:55:36.461"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath:.//td[contains(., 'joao@teste.com')]</arg>
+</arguments>
+<assign>
+<var>${usuario1}</var>
+</assign>
+<msg timestamp="20210307 22:55:36.480" level="INFO">${usuario1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="4d6779267bf7bd48d6de2337c32aa27b", element="f67e5566-c0c6-4c6d-8596-ec85b60fae36")&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:36.461" endtime="20210307 22:55:36.480"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${usuario1.text}</arg>
+<arg>joao@teste.com</arg>
+</arguments>
+<status status="PASS" starttime="20210307 22:55:36.480" endtime="20210307 22:55:36.500"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath:.//td[contains(., 'maria@teste.com')]</arg>
+</arguments>
+<assign>
+<var>${usuario2}</var>
+</assign>
+<msg timestamp="20210307 22:55:36.517" level="INFO">${usuario2} = &lt;selenium.webdriver.remote.webelement.WebElement (session="4d6779267bf7bd48d6de2337c32aa27b", element="2c7e40e8-e031-4dda-9c1f-f892b688e666")&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:36.500" endtime="20210307 22:55:36.517"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${usuario2.text}</arg>
+<arg>maria@teste.com</arg>
+</arguments>
+<status status="PASS" starttime="20210307 22:55:36.518" endtime="20210307 22:55:36.533"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:removeUser1</arg>
+</arguments>
+<msg timestamp="20210307 22:55:36.533" level="INFO">Clicking element 'id:removeUser1'.</msg>
+<status status="PASS" starttime="20210307 22:55:36.533" endtime="20210307 22:55:36.591"></status>
+</kw>
+<kw name="Finaliza cenario" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210307 22:55:37.080" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:36.592" endtime="20210307 22:55:37.080"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210307 22:55:37.080" endtime="20210307 22:55:39.279"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:36.591" endtime="20210307 22:55:39.281"></status>
+</kw>
+<tags>
+<tag>excluir</tag>
+</tags>
+<status status="PASS" starttime="20210307 22:55:32.172" endtime="20210307 22:55:39.282" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210307 22:54:58.498" endtime="20210307 22:55:39.287"></status>
+</suite>
+<suite id="s1-s2" name="Titulo" source="d:\Ines\TestePratico\LoginStefanini\web\test\titulo.robot">
+<test id="s1-s2-t1" name="Validação do titulo da página">
+<kw name="Inicia cenario" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210307 22:55:39.309" level="INFO">Opening browser 'chrome' to base url 'http://prova.stefanini-jgr.com.br/teste/qa/'.</msg>
+<status status="PASS" starttime="20210307 22:55:39.308" endtime="20210307 22:55:42.547"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:39.308" endtime="20210307 22:55:42.548"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Cadastro de usuários</arg>
+</arguments>
+<msg timestamp="20210307 22:55:42.558" level="INFO">Page title is 'Cadastro de usuários'.</msg>
+<status status="PASS" starttime="20210307 22:55:42.549" endtime="20210307 22:55:42.559"></status>
+</kw>
+<kw name="Finaliza cenario" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210307 22:55:43.227" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210307 22:55:42.561" endtime="20210307 22:55:43.228"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210307 22:55:43.228" endtime="20210307 22:55:45.343"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:42.560" endtime="20210307 22:55:45.344"></status>
+</kw>
+<status status="PASS" starttime="20210307 22:55:39.307" endtime="20210307 22:55:45.344" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210307 22:55:39.296" endtime="20210307 22:55:45.348"></status>
+</suite>
+<status status="PASS" starttime="20210307 22:54:58.467" endtime="20210307 22:55:45.356"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0">Critical Tests</stat>
+<stat pass="7" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">campo_email</stat>
+<stat pass="1" fail="0">campo_nome</stat>
+<stat pass="1" fail="0">campo_obrig</stat>
+<stat pass="1" fail="0">campo_senha</stat>
+<stat pass="1" fail="0">excluir</stat>
+<stat pass="1" fail="0">login</stat>
+</tag>
+<suite>
+<stat pass="7" fail="0" id="s1" name="Test">Test</stat>
+<stat pass="6" fail="0" id="s1-s1" name="Login">Test.Login</stat>
+<stat pass="1" fail="0" id="s1-s2" name="Titulo">Test.Titulo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
